@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    
+    <meta name="csrf-param" content="authenticity_token" />
+
+
+    <link rel="stylesheet" media="all" href="/assets/application.css" data-turbolinks-track="reload" />
+  
+  </head>
+
+  <body>
+    <p id="notice">
+      
+  <%= flash[:notice] %>
+</p>
+<p>
+  <strong>@book Title:</strong>
+ <%= @book.title %>
+</p>
+
+<p>
+  <strong>@book Body:</strong>
+  <%= @book.body %>
+</p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+|
+<%= link_to "Back", books_path %>
+
+  </body>
+</html>
